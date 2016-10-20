@@ -1246,6 +1246,7 @@ Je suis une remarque !
 <h1><code>display: block;</code></h1>
 <p>Un élément <code>block</code> :</p>
 <ul>
+<li>passe à la ligne,</li>
 <li>utilise toute la largeur disponible,</li>
 <li>permet l'attribution de marges verticales,</li>
 <li>permet la modification de sa largeur et hauteur.</li>
@@ -1255,7 +1256,7 @@ Je suis une remarque !
 <p>Un élément <code>inline</code> :</p>
 <ul>
 <li>a une taille dépendant de son contenu,</li>
-<li>n'a pas de retour chariot ni avant, ni après,</li>
+<li>n'a pas de retour chariot ni avant, ni après (sauf si précédé par un élément <code>block</code>),</li>
 <li>est enchaîné directement avec les <code>inline</code> suivants.</li>
 </ul>
 </section><section id="la-propriété-position" class="slide level3">
@@ -1263,23 +1264,22 @@ Je suis une remarque !
 <p>Altère le positionnement d'un élément en suivant (ou pas) le flux standard.</p>
 </section><section id="position-static" class="slide level3">
 <h1><code>position: static;</code></h1>
-<p>Avec la valeur <code>static</code>, qui est la <strong>valeur par défaut</strong>, l'élément suit le flux normal du positionnement.</p>
-<p>L'élément reste donc dans le flux normal.</p>
+<p>C'est la <strong>valeur par défaut</strong>, l'élément suit le flux normal du positionnement.</p>
 </section><section id="position-relative" class="slide level3">
 <h1><code>position: relative;</code></h1>
-<p>Avec la valeur <code>relative</code>, l'élément est décalé de sa position normale tout en restant dans le flux.</p>
+<p>L'élément est décalé de sa position normale tout en restant dans le flux.</p>
 <p>Les autres éléments ne sont pas impactés.</p>
 <p>On peut utiliser les propriétés <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> pour spécifier le décalage voulu.</p>
 <p><em>Positionne</em> l'élément, il devient un référentiel pour les descendants positionnés en <code>absolute</code>.</p>
 </section><section id="position-absolute" class="slide level3">
 <h1><code>position: absolute;</code></h1>
-<p>Avec la valeur <code>absolute</code>, l'élément sort complètement du flux standard.</p>
+<p>L'élément sort complètement du flux standard.</p>
 <p>Son positionnement devient relatif à son premier parent positionné (avec position à <em>absolute</em> ou <em>relative</em>).</p>
 <p>On peut utiliser les propriétés <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, <code>width</code> et <code>height</code> pour spécifier sa position et sa taille.</p>
 <p><em>Positionne</em> l'élément, il devient un référentiel pour les descendants positionnés en <code>absolute</code>.</p>
 </section><section id="position-fixed" class="slide level3">
 <h1><code>position: fixed;</code></h1>
-<p>Avec la valeur <code>fixed</code>, la position de l'élément est relative à la <strong>fenêtre</strong> du navigateur (et non au body).</p>
+<p>La position de l'élément est relative à la <strong>fenêtre</strong> du navigateur (et non au body).</p>
 <p>On peut utiliser les propriétés <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, <code>width</code> et <code>height</code> pour spécifier sa position et sa taille.</p>
 </section><section id="overflow" class="slide level3">
 <h1>Overflow</h1>

@@ -1516,7 +1516,7 @@ p.remark {
 
 <p class='remark'>Je suis une remarque !</p>
 
-### Organisation de l'espace
+### Positionnement des éléments
 
 Le navigateur dispose les éléments dans la page en fonction plusieurs règles, 
 en suivant un _"flux"_.
@@ -1539,6 +1539,7 @@ Chaque élément HTML possède sa propre valeur intrinsèque, modifiable avec CS
 
 Un élément `block` :
 
+- passe à la ligne,
 - utilise toute la largeur disponible,
 - permet l'attribution de marges verticales,
 - permet la modification de sa largeur et hauteur.
@@ -1548,23 +1549,42 @@ Un élément `block` :
 Un élément `inline` :
 
 - a une taille dépendant de son contenu,
-- n'a pas de retour chariot ni avant, ni après,
+- n'a pas de retour chariot ni avant, ni après (sauf si précédé par un élément `block`),
 - est enchaîné directement avec les `inline` suivants.
 
 ### La propriété `position`
 
-Altère le positionnement d'un élément:
+Altère le positionnement d'un élément en suivant (ou pas) le flux standard.
 
-- **static** : suit le flux normal _(valeur par défaut)_.
-- **relative** : l'élément est décalé de sa position normale mais reste dans le flux. Les autres éléments ne sont pas impactés. *Positionne* l'élément.
-- **absolute** : la position de l'élément est relative à son premier parent positionné (avec position à *absolute* ou *relative*).
-- **fixed** : la position de l'élément est relative à la fenêtre du navigateur.
+### `position: static;`
 
-_Seules les positions `static` et `relative` maintiennent l'élément dans le flux normal._
+C'est la **valeur par défaut**, l'élément suit le flux normal du positionnement.
 
-### Positionnement
+### `position: relative;`
 
-La propriété `position` est utilisée conjointement avec `top`, `right`, `bottom`, `left`, `width` et `height`.
+L'élément est décalé de sa position normale tout en restant dans le flux.
+
+Les autres éléments ne sont pas impactés.
+
+On peut utiliser les propriétés `top`, `right`, `bottom`, `left` pour spécifier le décalage voulu.
+
+*Positionne* l'élément, il devient un référentiel pour les descendants positionnés en `absolute`.
+
+### `position: absolute;`
+
+L'élément sort complètement du flux standard.
+
+Son positionnement devient relatif à son premier parent positionné (avec position à *absolute* ou *relative*).
+
+On peut utiliser les propriétés `top`, `right`, `bottom`, `left`, `width` et `height` pour spécifier sa position et sa taille. 
+
+*Positionne* l'élément, il devient un référentiel pour les descendants positionnés en `absolute`.
+
+### `position: fixed;`
+
+La position de l'élément est relative à la **fenêtre** du navigateur (et non au body).
+
+On peut utiliser les propriétés `top`, `right`, `bottom`, `left`, `width` et `height` pour spécifier sa position et sa taille. 
 
 ### Overflow
 

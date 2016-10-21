@@ -73,6 +73,12 @@ Exemple
 	
 	<b><u>Ici les balises ne sont</b> pas correctes, c'est une erreur
 
+### Le texte à l'intérieur des balises
+
+Le HTML ne prend pas en compte les espaces et retours chariots lorsqu'ils sont consécutifs. HTML n'en retient qu'un.
+
+Vous pouvez donc insérer des retours chariot où bon vous semble, cela ne perturbera pas la mise en page.
+
 ### Structure d'un document HTML
 
 Structure minimale obligatoire d'une page :

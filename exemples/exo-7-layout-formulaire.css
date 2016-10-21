@@ -109,6 +109,10 @@ button {
 }
 
 @media(max-width: 640px) {
+    #header {
+        position: absolute;
+    }
+    
     #principal {
         margin-top: 3em;
         padding: 1em;

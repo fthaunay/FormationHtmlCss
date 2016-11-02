@@ -51,6 +51,16 @@ Ajouter du code utilisant JQuery pour :
 	</div>
 
 	<div id="notes"></div>
+
+	<script>
+		$("a.footnote").each(function(i) {
+			let footNoteId = "foot_" + i
+			$(this).attr("href", "#" + footNoteId )
+			$("#notes").append(
+				$('<p>').html( $(this).attr("data-note") ).attr("id", footNoteId)
+			)
+		})
+	</script>
 </body>
 
 </html>

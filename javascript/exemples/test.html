@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="jquery-3.1.1.js"></script>
+	<script>
+        $(function(){
+            function valider() {
+                let texte = $("input").val();
+
+                $("#log").append( $("<p>").html( "SAISIE: " + texte ) );
+
+                $("input")
+                    .val("")
+                    .focus();
+            }
+
+            $("button").click(valider);
+
+            $("input").keyup(function(event){
+                if(event.key == "Enter")
+                    valider();
+            });
+        });
+    </script>
+</head>
+
+<body>
+	<input type="text">
+	<button>Valider</button>
+	<div id="log"></div>
+</body>
+
+</html>

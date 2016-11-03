@@ -5,30 +5,35 @@
 	<script src="jquery-3.1.1.js"></script>
 	<script>
         $(function(){
-            function valider() {
-                let texte = $("input").val();
+            // alimenter le background color
+            function majCouleur() {
+                // trouver la valeur de chaque input
+                let rouge = $("#rouge").val();
+                let vert = $("#vert").val();
+                let bleu = $("#bleu").val();
 
-                $("#log").append( $("<p>").html( "SAISIE: " + texte ) );
+                // former une chaine de caractere de couleur valide en css
+                // rgb( RR, VV, BB )
+                let color = 'rgb(' + rouge + "," + vert + "," + bleu + ')';
 
-                $("input")
-                    .val("")
-                    .focus();
+                // affecter cette valeur a bkgdcolor
+                $('#sampler').css('background-color', color);
             }
 
-            $("button").click(valider);
-
-            $("input").keyup(function(event){
-                if(event.key == "Enter")
-                    valider();
-            });
+            // abonnement aux input
+            $('input').bind('input', function() {
+                majCouleur();
+            })
         });
     </script>
 </head>
 
 <body>
-	<input type="text">
-	<button>Valider</button>
-	<div id="log"></div>
+	<input id="rouge" type="range" min="0" max="255" step="1">
+	<input id="vert" type="range" min="0" max="255" step="1">
+	<input id="bleu" type="range" min="0" max="255" step="1">
+
+	<div id="sampler" style="position:relative; width:200px; height:200px;"></div>
 </body>
 
 </html>

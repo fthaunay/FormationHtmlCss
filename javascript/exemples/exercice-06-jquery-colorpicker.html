@@ -2,7 +2,7 @@
 <html>
 
 <!--
-	EXERcIcE
+	EXERCICE
 
 	Reproduire ceci
 -->
@@ -12,7 +12,7 @@
 	<script>
 		// obtient un object avec les trois composantes de couleur
 		// à partir des positions des sliders
-		let getColor = function(){
+		let getColor = function() {
 			// on multiplie par 1 pour que la valeur soit bien un 'number',
 			// sinon c'est un string
 			let r = 1 * $('#rouge').val()
@@ -31,7 +31,7 @@
 
 		// met à jour le sampler avec la couleur représentée par les sliders
 		let updateColor = function(){
-			let color = getColor()
+			let color = getColor() // { r:100, v:230, b:12 }
 
 			let backgroundColor = toCssColor(color)
 			let textColor = (color.r+color.v+color.b)>(128*3) ? 'black' : 'white'
@@ -58,7 +58,7 @@
 			})
 
 			// abonnement par délégation au click sur les échantillons
-			$(document).on('click', '#palette>div', function(event) {
+			$(document).on('click', '#palette>div', function() {
 				// mettre a jour les attributs des input
 				for( let couleur of ['rouge', 'vert', 'bleu'])
 					$('#'+couleur).val( $(this).attr('data-'+couleur) )

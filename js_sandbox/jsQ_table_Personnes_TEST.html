@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<!--
+
+    html>head+body
+    
+    EXERCICE : Créer une <table> à partir des données présentes dans la page
+-->
+
+<head>
+    <script src="jquery-3.1.1.js" type="text/javascript"></script>
+
+    <script>
+        var applicationData = [
+            {
+                nom: "Toto",
+                age: 33,
+                ville: "Toulouse",
+                couleur: "pink"
+            },
+            {
+                nom: "Titi",
+                age: 13,
+                ville: "Paris",
+                couleur: "#e5f"
+            },
+            {
+                nom: "fabla",
+                age: 32,
+                ville: "Perpignan",
+                couleur: "#a23"
+            },
+            {
+                nom: "Youpo",
+                age: 43,
+                ville: "Valence",
+                couleur: "#eee"
+            },
+            {
+                nom: "Pierre",
+                age: 3,
+                ville: "Stone",
+                couleur: "red"
+            },
+            {
+                nom: "Walter",
+                age: 23,
+                ville: "Gif sur Yvette",
+                couleur: "blue"
+            }
+        ];
+    </script>
+
+
+<script>
+
+// créer une table avec les données présentes dans le tableau applicationData 
+
+$(function(){
+
+    let table = $("<table><tr><th>NOM</th><th>AGE</th><th>VILLE</th><th>COULEUR</th></tr></table>");
+    // Pour chaque personne, créer une ligne puis l'ajouter à la table
+  //  applicationData.forEach(function(personne){
+  //      let tr = ($(`<tr><td>${personne.nom}</td><td>${personne.age}
+  //              </td><td>${personne.ville}</td><td style="background-color: ${personne.couleur}
+  //              ;">${personne.couleur}</td></tr>`))
+  //      table.append(tr);
+  //  });
+
+  //  for (personne of  applicationData){
+  //     let tr = ($(`<tr><td>${personne.nom}</td><td>${personne.age}
+  //              </td><td>${personne.ville}</td>
+  //<td style="background-color: ${personne.couleur};">${personne.couleur}</td></tr>`))
+  //     table.append(tr);
+  //  } 
+
+    for (personne of  applicationData){
+       let tr = ("<tr><td>"+personne.nom+"</td><td>"+personne.age+"</td><td>"+
+       personne.ville+"</td><td style=\"background-color: "+personne.couleur+";\">"+personne.couleur+"</td></tr>")
+       table.append(tr);
+    } 
+
+// ajouter la table au body
+table.appendTo("body");
+
+});
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

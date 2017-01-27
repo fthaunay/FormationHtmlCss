@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="jquery-3.1.1.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('#bouton').click(function (event) {
+                console.log($('input').val());
+                 let nouveauParagraphe = $('<p>').html("Valeur: " + $("input").val());
+                  $('#resultat').append(nouveauParagraphe);
+           //     $('#resultat').html( $('input').val());
+                 console.log($('#resultat').html);
+                $("input").val("").focus();
+            });
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <input id="input" type="text" /> <br>
+    <button id="bouton">OK</button> <br><br>
+    <div id="resultat"></div>
+
+</body>
+
+</html>

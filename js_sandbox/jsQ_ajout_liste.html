@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.1.1.js"> </script>
+
+
+<script>
+    // Une fois le contexte chargé ...
+    $(function () {
+
+        function valider() {
+            // un nouveau paragraphe avec la valeur de l'input
+            let nouveauParagraphe = $('<p>').html("Valeur: " + $("input").val());
+
+            // on ajoute ce nouveau paragraphe dans la div de résultat
+            $('#log').append(nouveauParagraphe);
+
+            // on reinitialise l'input et on lui donne le focus
+            $("input").val("").focus();
+        }
+
+        // on associe la fonction valider au clic du bouton
+        $("button").click(valider);
+
+        // on associe également la fonction valider à l'appui de la touche entrer de l'input
+        // et dans ce cas, on lui redonne le focus
+        $("input").keyup(function (event) {
+            if (event.key == "Enter")
+                valider();
+        })
+            .focus();
+    });
+    </script>
+
+</head>
+
+<body>
+
+    <input id="champSaisie" type="text" />
+    <button id="monBouton">Entrer</button>
+    <div id="log"></div>
+
+</body>
+
+</html>

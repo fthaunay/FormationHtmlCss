@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="jquery-3.1.1.js" type="text/javascript"></script>
+
+
+    <script>
+
+        // L'arborescence du menu doit être initialement cachée (hide)
+        // Le clic permet de faire afficher ou disparaitre les enfants (toggle)
+        // Lorsque l'item n'a pas d'enfant, on fait afficher une alerte 
+
+
+
+        $(function () {
+            // arborescence initialement cachée
+            $(".menu > div ").hide();
+
+            // s'abonner au clic et faire toogle
+            // Attention, this dans le contexte global se réfère à window
+            // alors que dans le cadre d'une fonction, il peut faire appel à l'élement de la sélection appelante.
+            $(".menu, .menu *").click(function (event) {
+                // empecher la propagation de l'évènement
+                event.stopPropagation();
+
+                // si l'item a des enfants
+                if($(this).children().length !=0){
+                     ($(this).children().toggle());
+                } 
+                else {
+                    alert("Fichier "+$(this).text())
+                }
+
+            });
+
+        });
+
+
+
+
+
+
+    </script>
+
+<style>
+		.menu,
+		.menu * {
+			cursor: pointer;
+			font-family: monospace;
+		}
+
+      
+
+	</style>
+</head>
+
+<body>
+
+    <div class="menu">
+        MENU
+        <div>
+            FICHIER
+            <div>Ouvrir</div>
+            <div>Fermer</div>
+            <div>Quitter</div>
+        </div>
+        <div>
+            EDITION
+            <div>Copier</div>
+            <div>Coller</div>
+            <div>Parametres</div>
+        </div>
+        <div>
+            VUE
+            <div>Plein ecran</div>
+            <div>Moitie d'ecran</div>
+            <div>Double ecran</div>
+        </div>
+        <div>
+            MON COMPTE
+            <div>Parametres</div>
+            <div>Confidentialite</div>
+            <div>Se deconnecter</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

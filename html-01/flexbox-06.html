@@ -1,0 +1,86 @@
+<!doctype.html>
+
+<html>
+
+<head>
+    <style>
+        #conteneur {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border: 5px solid black;
+        }
+        
+        #header {
+            border: 5px solid black;
+            flex-grow: 1;
+        }
+        
+        #footer {
+            border: 5px solid black;
+            flex-grow: 1;
+        }
+        
+        #conteneur2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-grow: 1;
+        }
+        
+        #conteneur2 > div {
+            border: 5px solid black;
+        }
+        
+        #corps {
+            flex-grow: 1;
+        }
+
+@media(max-width:700px) {
+
+    #header {
+            flex-grow: 0;
+        }
+        
+        #footer {
+            flex-grow: 0;
+        }
+
+ #conteneur2 {
+            flex-direction: column;
+        }
+         #corps {
+            flex-grow: 1;
+        }
+
+
+
+
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="conteneur">
+        <div id="header">HEADER</div>
+        <div id="conteneur2">
+            <div>NAV </div>
+            <div id="corps">CORPS </div>
+            <div>aside </div>
+        </div>
+        <div id="footer">FOOTER</div>
+    </div>
+</body>
+
+</html>

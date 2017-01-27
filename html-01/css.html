@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .avertissement {
+            color: red;
+        }
+        
+        .facultatif {
+            font-style: italic;
+        }
+        
+        #tartempion {
+            font-size: 300%;
+        }
+        
+        .urgent {
+            font-weight: bold;
+            color: red;
+        }
+        
+        #principal {
+            color: green;
+        }
+        
+        .urgent:hover {
+            font-size: 300%;
+            border: 10px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class='avertissement facultatif'> Un paragraphe </p>
+    <p> Un paragraphe </p>
+    <p> Un paragraphe </p>
+    <ul>
+        <li class='facultatif'>item 1</li>
+        <li class='avertissement'>item 2</li>
+        <li id="tartempion">item 3</li>
+    </ul>
+    <div id="principal" class="urgent">VERT OU BLEU</div>
+</body>
+
+
+</html>

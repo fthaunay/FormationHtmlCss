@@ -1,0 +1,148 @@
+<!doctype.html>
+
+<html>
+
+<head>
+    <style>
+        body{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border: 5px solid black;
+        }
+        /* -------  header -------   */
+        
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            flex-grow: 0;
+        }
+        
+        nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            background-color: black;
+            justify-content: space-around;
+        }
+        
+        nav>ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: row wrap;
+            align-items: stretch;
+            list-style: none;
+            justify-content: flex-end;
+            padding: 0;
+        }
+        
+        nav>ul>li {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-bottom: 1px solid black;
+            border-top: 1px solid #3c3c3c;
+            color: #ffffff;
+            background-color: green;
+        }
+        /* -------  main -------   */
+        
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: row wrap;
+
+            flex-grow: 1;
+        }
+        
+        .badge {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: row wrap;
+        }
+        
+        .principal {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        
+        .entete {
+            background-color: #111111;
+            color: lightslategray;
+        }
+        
+        .photo {
+            float: right
+        }
+        
+        .pied {
+            background-color: dodgerblue;
+        }
+        
+        footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background-color: black;
+            flex-grow:0;
+        }
+        /* -------  footer -------   */
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Fichier</li>
+                <li>Affichage</li>
+                <li>A propos</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio
+                ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum
+                optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+    </main>
+    <footer>Footer</footer>
+
+
+</body>
+
+</html>

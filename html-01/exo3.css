@@ -1,0 +1,98 @@
+body{
+     margin:0;
+     padding: 0;
+ }
+
+ *{
+     box-sizing: border-box;
+ }
+ 
+ /* reset CSS ou feuille de style, à voir*/
+
+/* partie position des blocs */
+
+  #global {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2C2F22;
+    
+    }
+
+     #centre {
+    position: relative;
+    top: 5em;
+    bottom:0;
+    width: 100%;
+    background-color: slategrey;
+    border-color:   slategrey;
+}
+
+  #principal {
+    position: absolute;
+    left: 14em;
+    right : 16em;
+    background-color: #cbd888;
+    border-color:  lightsteelblue;
+}
+
+ #navigation {
+    position: absolute;
+    left: 2em;
+    width : 10em;
+    top: 0;
+    background-color: #181A12;
+}
+
+ #secondaire {
+    position: absolute;
+    width : 12em;
+    right: 2em;
+    top: 0;
+    background-color: #181A12;
+}
+
+    
+/* partie synthaxe */
+
+  li:hover {
+            cursor: pointer;
+          }
+    .ulNavig{
+    list-style-type:none;
+    }
+
+
+
+    h1{
+        color: #cbd888;
+        font-weight :200%;
+    }
+    #carac{
+        color:green;
+        font-weight: bold;
+    }
+
+    .sousEntete{
+         color: #cbd888;
+    }
+
+
+/* LES IMAGES */
+
+    .image-gauche {
+  float: left;
+}
+.image-droite {
+  float: right;
+}
+
+@media print{
+    #navigation{
+        display:none;
+    }
+}
+
+        

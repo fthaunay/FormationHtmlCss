@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <script type="text/javascript">
+    var TITRE = "toto";
+    </script>
+
+        <script type="text/javascript">
+        window.addEventListener("load", function(){
+            function elem(id){
+                return document.getElementById(id);
+            }
+
+        // recupère les éléments du body
+        var bouton = elem("bouton");
+        var Launcher = elem("launcher");
+        var start = elem("start");
+        var stop = elem("stop");
+
+        var timerId = null;
+        var compteur = 0;
+
+        bouton.addEventListener("click", function(){
+           //afficher "Explosion dans 3 secondes"
+            launcher.innerText = "Explosion dans 3 secondes";
+            // Au bout de 3 secondes, afficher "BOOM"
+            setTimeout(function(){
+                launcher.innerText="BOOM";
+            }, 3000);
+        });
+
+        start.addEventListener("click", function(){
+            if(timerId !== null){
+                Launcher.innerText = "reset !";
+                compteur = 0;
+                return;
+            }
+            timerId = setInterval(function(){
+                compteur++;
+                launcher.innerText=compteur;
+            }, 1000);
+        });
+        stop.addEventListener("click", function(){
+            clearInterval(timerId);
+            timerId = null;
+        });
+     });
+
+        </script>
+</head>
+
+<body>
+    <button id="bouton">Launch</button>
+    <div id="launcher"></div>
+
+<button id="start">START/RESET</button>
+<button id="stop">STOP</button>
+
+
+</body>
+
+</html>

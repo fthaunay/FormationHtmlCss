@@ -1,0 +1,222 @@
+<!doctype.html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        
+        header {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            flex-grow: 0;
+            background-color: black;
+        }
+        
+        nav {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        nav>ul {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: row wrap;
+            align-items: stretch;
+            list-style: none;
+            justify-content: unset;
+            padding: 0;
+        }
+        
+        nav>ul>li {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            border-bottom: 1px solid black;
+            color: #ffffff;
+            font-size: 15pt;
+            background-color: black;
+        }
+        
+        nav>ul>li:hover {
+            cursor: text;
+            background-color: grey;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+        }
+        
+        footer {
+            flex-grow: 0;
+            background-color: black;
+            color: #ffffff;
+        }
+        
+        .badge {
+            width: 300px;
+            height: 400px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border-color: lightsteelblue;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+        
+        .entete {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding-left: 10px;
+            background-color: #111111;
+            color: lightslategray;
+            font-size: 25pt;
+            font-variant: small-caps;
+        }
+        
+        .principal {
+            background-color: #AADDFF;
+            overflow-y: scroll;
+            flex-grow: 1;
+            padding: 10px;
+        }
+        
+        .photo {
+            width: 80px;
+            height: 110px;
+            margin-top: 15px;
+            margin-right: 15px;
+            background-color: darkgrey;
+            float: right
+        }
+        
+        .pied {
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: dodgerblue;
+        }
+        
+        @media(max-width:700px) {
+            body {
+                height: 100%;
+                overflow: hidden;
+            }
+            header {
+                position: fixed;
+                width: 100%;
+            }
+            nav>ul {
+                flex-direction: column;
+            }
+            main {
+                display: block;
+                margin-top: 60px;
+                overflow-y: scroll;
+            }
+            .badge {
+                display: block;
+                width: 700px;
+                height: auto;
+            }
+            .photo {
+                width: 50px;
+                height: 70px;
+                margin-top: 5px;
+                margin-right: 5px;
+                float: left
+            }
+            .entete {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+            .principal {
+                overflow: hidden;
+            }
+
+            .pied {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+           footer {
+               display:block;
+                position: fixed;
+                bottom:0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Fichier</li>
+                <li>Affichage</li>
+                <li>A propos</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio
+                ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum
+                optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="badge">
+            <div class="entete">Entete</div>
+            <div class="principal">
+                <div class="photo">photo</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut,
+                fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.</div>
+            <div class="pied">Pied</div>
+        </div>
+    </main>
+    <footer>Footer</footer>
+
+
+</body>
+
+
+
+
+
+
+</html>

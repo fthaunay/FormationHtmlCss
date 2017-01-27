@@ -1,0 +1,60 @@
+body{
+     margin:0;
+     padding: 0;
+ }
+
+ *{
+     box-sizing: border-box;
+ }
+ 
+ /* reset CSS ou feuille de style, à voir*/
+
+         #header {
+    position: absolute;
+    top: 0;
+    height: 15%;
+    left: 0;
+    right: 0;
+    background-color: #11BF11;
+    border-color: #2D882D;
+}
+
+       #menu {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 200px;
+    bottom: 10%;
+    background-color: #3123A6;
+    border-color: #393276;
+}
+
+       #content {
+    position: absolute;
+    top: 15%;
+    left: 200px;
+    right: 0;
+    bottom: 10%;
+    background-color: #EFC016;
+    border-color: #AA9139;
+}
+
+        #footer {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    left: 0;
+    right: 0;
+    background-color: #EF1616;
+    border-color: #AA3939;
+}
+
+        #container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+

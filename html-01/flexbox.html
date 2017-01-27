@@ -1,0 +1,41 @@
+<!doctype.html>
+
+<html>
+
+<head>
+    <style>
+        #conteneur {
+            background-color: #777777;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        
+        #conteneur > div:nth-child(1) {
+            background-color: #ff3333;
+        }
+        
+        #conteneur > div:nth-child(2) {
+            background-color: #33ff33;
+        }
+        
+        #conteneur > div:nth-child(3) {
+            background-color: #3333ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteneur">
+        <div>PARTIE 1</div>
+        <div>PARTIE 2 </div>
+        <div>PARTIE 3</div>
+    </div>
+</body>
+
+</html>

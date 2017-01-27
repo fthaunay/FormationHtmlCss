@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+        window.addEventListener("load", function () {
+
+            var monInput = document.getElementById("input");
+            var monBouton = document.getElementById("bouton");
+            var maDiv = document.getElementById("resultat");
+
+            monBouton.addEventListener("click", function () {
+                maDiv.innerHTML += monInput.value;
+                console.log(maDiv.innerHTML);
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <input id="input" type="text"> <br>
+    <button id="bouton">OK</button> <br><br>
+    <div id="resultat"></div>
+
+</body>
+
+</html>

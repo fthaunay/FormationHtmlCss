@@ -1,0 +1,39 @@
+<!doctype.html>
+
+<html>
+
+<head>
+    <style>
+        #conteneur {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border: 5px solid black;
+        }
+        
+        #conteneur > div {
+            border: 5px solid black;
+        }
+
+        #corps{
+            flex-grow: 1;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="conteneur">
+        <div>HEADER</div>
+        <div id="corps">CORPS </div>
+        <div>FOOTER</div>
+    </div>
+</body>
+
+</html>

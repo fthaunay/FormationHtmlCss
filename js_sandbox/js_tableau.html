@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input id="monInput" type="text">
+    <button id="monBouton"> OK
+</button>
+    <div id="maDiv"> Pas de Texte</div>
+
+    <table id="monTableau">
+        <tr>
+            <th>id</th>
+            <th>Nom</th>
+            <th>Age</th>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+    // récupérer une référence à l'objet qui représente la div
+    var maDiv = document.getElementById("maDiv");
+
+
+    var monInput = document.getElementById("monInput");
+    // on modifie le contenu de "maDiv"
+    maDiv.innerHTML = "<h1>La valeur de l'input est " + monInput.value + "</h1>";
+
+    // reagir au click sur le bouton
+    var monBouton = document.getElementById("monBouton");
+    monBouton.addEventListener("click", function () {
+        maDiv.innerHTML = "<h1>Saisie : " + monInput.value + "</h1>";
+    });
+
+    // tableau d'objets
+    var utilisateurs = [{ id: 3, nom: "toto", age: 10 }, { id: 4, nom: "tato", age: 12 }, { id: 8, nom: "tuy", age: 18 }, { id: 9, nom: "klmjo", age: 20 },
+    { id: 9, nom: "tugo", age: 30 }, { id: 8, nom: "to", age: 1 }, { id: 7, nom: "tkh", age: 19 }, { id: 85, nom: "tjho", age: 5 }];
+
+
+    var tableau = document.getElementById("monTableau");
+
+
+    utilisateurs.forEach(function (utilisateur) {
+        tableau.innerHTML += "<tr><td>" + utilisateur.id + "</td><td>" + utilisateur.nom + "</td><td>" + utilisateur.age + " </td></tr>";
+    });
+
+</script>
+
+</body>
+
+</html>
